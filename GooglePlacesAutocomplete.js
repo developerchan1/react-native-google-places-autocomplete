@@ -492,6 +492,7 @@ export const GooglePlacesAutocomplete = forwardRef((props, ref) => {
 
             _results = results;
             setDataSource(buildRowsFromResults(results));
+            props.onAutocompleteRequestSuccess(results);
             // }
           }
           if (typeof responseJSON.error_message !== 'undefined') {
